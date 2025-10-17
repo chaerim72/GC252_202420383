@@ -1,10 +1,10 @@
-let Vehicle;
+let vehicle;
 let target;
 
 function setup() {
   createCanvas(800, 600);
 
-  Vehicle = new Vehicle(width / 2, height / 2, 3, 0.05);
+  vehicle = new Vehicle(width / 2, height / 2, 3, 0.05);
   target = createVector(width / 2, height / 2);
 }
 
@@ -19,7 +19,7 @@ function draw() {
   fill("red");
   circle(target.x, target.y, 16);
 
-  Vehicle.seek(target);
-  Vehicle.update();
-  Vehicle.show();
+  vehicle.seek(target);
+  vehicle.update();
+  vehicle.show();
 }

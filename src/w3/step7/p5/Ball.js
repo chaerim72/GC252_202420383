@@ -59,9 +59,8 @@ class Ball {
   isHovered() {
     let dx = this.posX - mouseX;
     let dy = this.posY - mouseY;
-    // let dist = sqrt(dx*dx+dy*dy);
+    // let dist = sqrt(dx * dx + dy * dy);
     let dist = (dx ** 2 + dy ** 2) ** (1 / 2);
-
     return dist < 0.5 * this.diameter;
   }
 }

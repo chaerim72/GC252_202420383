@@ -1,16 +1,17 @@
-let pallete = ["#3E1E68", "#5D2F77", "#E45A92", "#FFACAC"];
+let pallete = ["#EF7722", "#FAA533", "#EBEBEB", "#0BA6DF"];
 
 let balls = [];
 
 function setup() {
   createCanvas(600, 400);
-  ball.push(new Ball(0.5 * width, 0.5 * height, 100, 7, pallete[0]));
-  ball.push(new Ball(0.5 * width, 0.5 * height, 50, 10, pallete[1]));
-  ball.push(new Ball(0.5 * width, 0.5 * height, 200, 3, pallete[2]));
-  ball.push(new Ball(0.5 * width, 0.5 * height, 150, 2, pallete[3]));
+
+  balls.push(new Ball(0.5 * width, 0.5 * height, 100, 7, pallete[0]));
+  balls.push(new Ball(0.5 * width, 0.5 * height, 50, 10, pallete[1]));
+  balls.push(new Ball(0.5 * width, 0.5 * height, 200, 3, pallete[2]));
+  balls.push(new Ball(0.5 * width, 0.5 * height, 150, 2, pallete[3]));
   for (let n = 0; n < 20; n++) {
-    ball.push(
-      new Ball(0.5 * width, 0.5 * height, 50, 5, pallete[n % pallete.length])
+    balls.push(
+      new Ball(0.5 * width, 0.5 * height, 50, 3, pallete[n % pallete.length])
     );
   }
 }
@@ -24,7 +25,8 @@ function draw() {
 
   balls.forEach((aBall) => {
     aBall.update();
-    aBall.resoveWallCollision();
+    aBall.resolveWallCollision();
+
     aBall.show();
   });
 

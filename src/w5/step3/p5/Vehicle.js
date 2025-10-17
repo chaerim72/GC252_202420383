@@ -34,7 +34,7 @@ class Vehicle {
     allVehicles.forEach((aVehicle) => {
       if (aVehicle !== this) {
         const dist = p5.Vector.dist(this.pos, aVehicle.pos);
-        if (dist > 0 && dist < this.r * 2) {
+        if (dist > 0 && dist < this.r * 3) {
           const towardMe = p5.Vector.sub(this.pos, aVehicle.pos);
           towardMe.div(dist);
           sum.add(towardMe);

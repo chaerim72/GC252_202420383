@@ -35,7 +35,7 @@ class Vehicle {
 
     const desired = p5.Vector.sub(target, this.pos);
 
-    if (dist < this.decRad) {
+    if (dist <= this.decRad) {
       desired.setMag(normalized * this.maxSpeed);
     } else {
       desired.setMag(this.maxSpeed);
@@ -46,7 +46,7 @@ class Vehicle {
     this.applyForce(steering);
   }
 
-  Show() {
+  show() {
     const angle = this.vel.heading();
     push();
     translate(this.pos.x, this.pos.y);
@@ -59,7 +59,7 @@ class Vehicle {
     beginShape();
     vertex(0, 0);
     vertex(this.r * cos(radians(-160)), this.r * sin(radians(-160)));
-    vertex(this.r * cos(radians(-160)), this.r * sin(radians(-160)));
+    vertex(this.r * cos(radians(160)), this.r * sin(radians(160)));
     endShape(CLOSE);
     pop();
   }
@@ -86,7 +86,7 @@ class Vehicle {
     push();
     translate(this.pos.x, this.pos.y);
     noFill();
-    stroke(255, 0, 0);
+    stroke(255);
     circle(0, 0, this.decRad * 2);
     pop();
   }

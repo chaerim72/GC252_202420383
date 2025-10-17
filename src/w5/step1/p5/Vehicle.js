@@ -16,7 +16,7 @@ class Vehicle {
     this.vel.add(this.acc);
     this.vel.limit(this.maxSpeed);
     this.pos.add(this.vel);
-    this.vel.mult(0);
+    this.acc.mult(0);
   }
 
   seek(target) {
@@ -27,7 +27,7 @@ class Vehicle {
     this.applyForce(steering);
   }
 
-  Show() {
+  show() {
     const angle = this.vel.heading();
     push();
     translate(this.pos.x, this.pos.y);
@@ -40,7 +40,7 @@ class Vehicle {
     beginShape();
     vertex(0, 0);
     vertex(this.r * cos(radians(-160)), this.r * sin(radians(-160)));
-    vertex(this.r * cos(radians(-160)), this.r * sin(radians(-160)));
+    vertex(this.r * cos(radians(160)), this.r * sin(radians(160)));
     endShape(CLOSE);
     pop();
   }

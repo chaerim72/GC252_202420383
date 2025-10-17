@@ -10,10 +10,10 @@ function setup() {
   // bBall = new Ball(0.5 * width, 0.5 * height, 50, 10, "blue");
   // cBall = new Ball(0.5 * width, 0.5 * height, 200, 3, "yellow");
   // dBall = new Ball(0.5 * width, 0.5 * height, 150, 2, "pink");
-  ball.push(new Ball(0.5 * width, 0.5 * height, 100, 7, "red"));
-  ball.push(new Ball(0.5 * width, 0.5 * height, 50, 10, "blue"));
-  ball.push(new Ball(0.5 * width, 0.5 * height, 200, 3, "yellow"));
-  ball.push(new Ball(0.5 * width, 0.5 * height, 150, 2, "pink"));
+  balls.push(new Ball(0.5 * width, 0.5 * height, 100, 7, "red"));
+  balls.push(new Ball(0.5 * width, 0.5 * height, 50, 10, "blue"));
+  balls.push(new Ball(0.5 * width, 0.5 * height, 200, 3, "yellow"));
+  balls.push(new Ball(0.5 * width, 0.5 * height, 150, 2, "pink"));
 }
 
 function draw() {
@@ -32,21 +32,21 @@ function draw() {
   // dBall.resolveWallCollision();
   // dBall.show();
 
-  // for (let idx = 0; idx < balls.length; idx++) {
+  // for(let idx = 0; idx < balls.length; idx++) {
   //   balls[idx].update();
   //   balls[idx].resolveWallCollision();
   //   balls[idx].show();
-  //   }
+  // }
 
-  // for(let aBall of balls) {
+  // for (let aBall of balls) {
   //   aBall.update();
-  //   aBall.resoveWallCollision();
+  //   aBall.resolveWallCollision();
   //   aBall.show();
-  //}
+  // }
 
   balls.forEach((aBall) => {
     aBall.update();
-    aBall.resoveWallCollision();
+    aBall.resolveWallCollision();
     aBall.show();
   });
 
