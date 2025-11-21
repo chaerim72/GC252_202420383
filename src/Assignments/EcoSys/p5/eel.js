@@ -49,9 +49,15 @@ class Eel {
     push();
     translate(this.pos.x, this.pos.y);
     rotate(this.vel.heading());
-    fill(this.color);
+    // fill(this.color);
+    // noStroke();
+    noFill();
+    stroke(255);
+    ellipse(0, 0, this.size * 2, this.size);
+    fill(255);
     noStroke();
-    ellipse(0, 0, this.size * 1.6, this.size * 0.5);
+    circle(this.size * 0.4, -this.size * 0.2, 4);
+    circle(this.size * 0.4, this.size * 0.2, 4);
     pop();
   }
 }

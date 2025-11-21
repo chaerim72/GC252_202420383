@@ -26,8 +26,10 @@ class Larva {
   }
 
   display() {
-    fill(this.color);
-    noStroke();
+    // fill(this.color);
+    // noStroke();
+    noFill();
+    stroke(255);
     ellipse(this.pos.x, this.pos.y, this.size);
   }
 }

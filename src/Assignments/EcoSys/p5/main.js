@@ -19,7 +19,7 @@ function setup() {
 }
 
 function draw() {
-  background(10, 30, 50);
+  background(0, 0, 0);
 
   // --- 애벌레 ---
   for (let l of larvas) {

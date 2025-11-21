@@ -83,8 +83,10 @@ class Fish {
     push();
     translate(this.pos.x, this.pos.y);
     rotate(this.vel.heading());
-    fill(this.color);
-    noStroke();
+    // fill(this.color);
+    noFill();
+    // noStroke();
+    stroke(255);
     triangle(
       -this.size / 2,
       -this.size / 3,
