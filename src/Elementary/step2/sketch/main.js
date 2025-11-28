@@ -5,7 +5,7 @@ const INITIAL_W = 800;
 const INITIAL_H = 600;
 const INITIAL_RATIO = INITIAL_W / INITIAL_H;
 
-const cellsPerRow = 50;
+const cellsPerRow = 20;
 let cellsPerColumn;
 const cells = [];
 let cellSize;
@@ -23,7 +23,7 @@ function createNextGen() {
     const y = refCell.pos[1] + cellSize;
     const w = cellSize;
     const h = cellSize;
-    const cell = new Cell(x, y, w, h, refCell, nextState);
+    const cell = new Cell(x, y, w, h, refCell.nextState);
     cells.push(cell);
   }
   for (let n = 0; n < cellsPerRow; n++) {
@@ -100,7 +100,7 @@ function mouseMoved() {
       break;
     }
   }
-  //   console.log(hoveredCell);
+  // console.log(hoveredCell);
 }
 
 function mousePressed() {
