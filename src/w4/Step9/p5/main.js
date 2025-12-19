@@ -1,4 +1,4 @@
-const palette = ["#134686", "#ED3F27", "#FEB21A", "#FDF4E3"];
+const palette = ["#165D63", "#FFFBD8", "#FED15A", "#DA9D42", "#BA4937"];
 
 const ballNum = 20;
 const balls = [];
